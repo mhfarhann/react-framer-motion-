@@ -38,10 +38,10 @@ const Navbar = ({openNavbar}) => {
   <div key='navbar-container'
  
   // className=' sm:flex hidden  bg-stone-800 bg-opacity-10 backdrop-blur-md rounded drop-shadow-lg overflow-x-hidden'
-     className='sm:flex hidden  bg-black p-2' >
+     className='sm:flex hidden  bg-black ' >
       <div key='list' 
        style={{ backgroundImage: `url(${noise})`}} 
-      className="sm:flex items-center mx-auto justify-center p-2 bg-pewter-50  w-screen rounded-full">
+      className="sm:flex items-center mx-auto justify-center p-2 bg-pewter-50  w-screen">
       {navbar.map((collection) => (
         
         <motion.a

@@ -3,6 +3,7 @@ import Circletext from "../assets/circletext";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Arrowup from "../assets/arrowup";
 import noise from '../assets/noise.png'
+import Marque from './marque'
 
 const Footer = () => {
   // let { scrollYprogress } = useScroll()
@@ -19,7 +20,7 @@ const Footer = () => {
   return (
     <motion.div 
     style={{ backgroundImage: `url(${noise})` }}
-    className="bg-pewter-50  sm:h-1/2 flex sm:flex-row flex-col justify-between overflow-hidden border-t-[1px] border-black border-solid">
+    className="bg-pewter-50  sm:h-1/2  flex sm:flex-row flex-col justify-between overflow-hidden border-t-[1px] border-black border-solid">
    
   <div className="sm:w-1/2 h-full relative   border-r-[1px] border-black border-solid">
     <button
@@ -54,17 +55,28 @@ const Footer = () => {
     </g>
   </svg>
     </button>
-     
-     <ul className="border-t-[1px] border-black border-solid text-black font-hanson p-4 sm:absolute bottom-0 w-full ">
-        <li>INSTAGRAM</li>
-        <li>WHATSAPP</li>
-        <li>TWITTER</li>
-      </ul>
+
+  
+    <ul className="border-t-1px border-black border-solid h-20 text-black font-hanson sm:absolute bottom-16 w-full flex align-items-center bg-green-400 justify-between text-center">
+        <li className="border-r-1px border-black border-solid h-20 bg-gray-500 items-center">INSTAGRAM</li>
+        <li className="border-r-1px border-black border-solid h-20 bg-gray-500 items-center">WHATSAPP</li>
+        <li className="h-20 bg-gray-500 items-center">TWITTER</li>
+</ul>
+
+
       
+
+    <div className="sm:absolute bottom-0 w-full bg-orange-400 ">
+    <Marque />
+   </div>
+
  
   </div>
-  <div className="  sm:w-1/2 h-full overflow-hidden  ">
+  <div className="  sm:w-1/2 sm:h-screen h-[200px]   ">
+    <div className="sm:h-screen flex w-full sm:flex sm:justify-center overflow-hidden bottom-0  ">
      <Circletext/>
+    </div>
+     
    </div>
    
     </motion.div>
