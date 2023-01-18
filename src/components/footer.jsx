@@ -56,11 +56,19 @@ const Footer = () => {
   </svg>
     </button>
 
-  
-    <ul className="border-t-1px border-black border-solid h-20 text-black font-hanson sm:absolute bottom-16 w-full flex align-items-center bg-green-400 justify-between text-center">
-        <li className="border-r-1px border-black border-solid h-20 bg-gray-500 items-center">INSTAGRAM</li>
-        <li className="border-r-1px border-black border-solid h-20 bg-gray-500 items-center">WHATSAPP</li>
-        <li className="h-20 bg-gray-500 items-center">TWITTER</li>
+    {/* <div class="content-center bg-gray-600 justify-between flex">
+  <p className="bg-weee-400 h-20 items-center text-center">instagram</p>
+  <p className="items-center bg-weee-400  h-20  text-center">instagram</p>
+  <p className="items-center bg-weee-400   h-20 text-center">instagram</p>
+</div> */}
+
+
+  <ul className="border-t-[1px] border-black border-solid 
+     text-black font-hanson sm:absolute bottom-16 w-full flex 
+       justify-between ">
+        <li className=" border-l-[1px] border-black border-solid h-20 items-center flex justify-center text-sm w-full cursor-pointer hover:bg-black hover:text-pewter-50"><p className="text-left">INSTAGRAM</p></li>
+        <li className=" border-l-[1px] border-black border-solid h-20 items-center flex justify-center text-sm w-full cursor-pointer hover:bg-black hover:text-pewter-50"><p>FACEBOOK</p></li>
+        <li className=" border-l-[1px] border-black border-solid h-20 items-center flex justify-center text-sm w-full cursor-pointer hover:bg-black hover:text-pewter-50"><p>TWITTER</p></li>
 </ul>
 
 
