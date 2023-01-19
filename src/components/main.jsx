@@ -34,7 +34,7 @@ const [open , setOpen] = useState()
   return (
   <>
   <AnimatePresence>
-  <div className='h-screen bg-black '  key='container'>
+  <div className={`h-screen bg-black ${open ? 'overflow-hidden' : null} `}  key='container'>
    <Navbar openNavbar={openNavbar} />
 
    {!open && <motion.div 
@@ -44,9 +44,9 @@ const [open , setOpen] = useState()
      animate={'visible'}
     key='image' className='h-2/3  bg-center bg-no-repeat bg-cover overflow-hidden font-hanson font-extrabold sm:text-6xl text-4xl italic text-weee-500 p-2'
     style={{backgroundImage: `url(${foto})`}}> 
-    <Typewriter words={['PURSUIT ➔']} loop={false}/>
+    {/* <Typewriter words={['PURSUIT ➔']} loop={false}/>
     <br/>
-    <Typewriter words={['OF HAPPINESS']}/>
+    <Typewriter words={['OF HAPPINESS']}/> */}
     </motion.div>}
 
     <Marque open={open}/>

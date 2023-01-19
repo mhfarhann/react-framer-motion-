@@ -4,10 +4,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Arrowup from "../assets/arrowup";
 import noise from '../assets/noise.png'
 import Marque from './marque'
+import Footerbutton from "../assets/footerbutton";
 
 const Footer = () => {
-  // let { scrollYprogress } = useScroll()
-  // let y = useTransform(scrollYprogress, [0,1],['0%', '100%'])
+
   const handleClick = () => {
     console.log("Touch")
     window.scrollTo({
@@ -16,6 +16,19 @@ const Footer = () => {
       behavior: 'smooth'
     });
   };
+
+  const variants = {
+    hidden: {
+      x:0
+    },
+    visible: {
+      backgroundColor: ["#000", "#09F",],
+      transition:{
+        delay:1,
+        duration: 2,
+      }
+    }
+  }
 
   return (
     <motion.div 
@@ -56,20 +69,14 @@ const Footer = () => {
   </svg>
     </button>
 
-    {/* <div class="content-center bg-gray-600 justify-between flex">
-  <p className="bg-weee-400 h-20 items-center text-center">instagram</p>
-  <p className="items-center bg-weee-400  h-20  text-center">instagram</p>
-  <p className="items-center bg-weee-400   h-20 text-center">instagram</p>
-</div> */}
-
-
   <ul className="border-t-[1px] border-black border-solid 
      text-black font-hanson sm:absolute bottom-16 w-full flex 
        justify-between ">
-        <li className=" border-l-[1px] border-black border-solid h-20 items-center flex justify-center text-sm w-full cursor-pointer hover:bg-black hover:text-pewter-50"><p className="text-left">INSTAGRAM</p></li>
-        <li className=" border-l-[1px] border-black border-solid h-20 items-center flex justify-center text-sm w-full cursor-pointer hover:bg-black hover:text-pewter-50"><p>FACEBOOK</p></li>
-        <li className=" border-l-[1px] border-black border-solid h-20 items-center flex justify-center text-sm w-full cursor-pointer hover:bg-black hover:text-pewter-50"><p>TWITTER</p></li>
-</ul>
+        <Footerbutton text={'INSTAGRAM'}/>
+        <Footerbutton text={'FACEBOOK'}/>
+        <Footerbutton text={'TWITTER'}/>
+       
+  </ul>
 
 
       

@@ -30,15 +30,15 @@ const Content = () => {
       <motion.div 
       style={{ backgroundImage: `url(${noise})` }}
       className="text-pewter-100 bg-pewter-50  w-screen  h-auto sm:h-2/3 flex flex-col sm:flex-row border-t-[1px] border-black border-solid ">
-        <motion.div className="sm:w-3/5  mr-0  p-4 sm:border-r-[1px] border-solid border-black relative  ">
+        <motion.div className="sm:w-3/5  mr-0  sm:border-r-[1px] border-solid border-black relative ">
           <motion.p
             variants={animateImage}
             initial={"hidden"}
             viewport={{ once: true }}
             whileInView={"visible"}
-            className=" text-pewter-100 font-hanson sm:text-8xl text-5xl font-bold sm:h-20   mr-6 sm:whitespace-nowrap  "
+            className=" text-pewter-100 font-hanson w-full p-4 sm:text-8xl text-5xl font-bold border-b-[1px] border-solid border-black sm:whitespace-nowrap  "
           >
-           MORNING GUYSS
+          TERMINAL
            
           </motion.p>
 
@@ -48,7 +48,7 @@ const Content = () => {
             initial={"hidden"}
             viewport={{ once: true }}
             whileInView={"visible"}
-            className="flex  font-hanson  sm:text-base   text-sm  m-6 ml-0 text-wee-50  sm:absolute bottom-0 "
+            className="flex  font-hanson  sm:text-base  p-4  text-sm  ml-0 text-wee-50  sm:absolute bottom-0 sm:border-t-[1px] border-solid border-black"
           >
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
@@ -99,9 +99,14 @@ const Content = () => {
             whileInView={"visible"}
             // style={{ y: isVisible ? y : 0 }}
           />
-          <div className=" font-hanson text-4xl text-black [writing-mode:vertical-lr]  whitespace-nowrap sm:hidden hidden md:flex items-center sm:absolute right-0">
+          <motion.div
+            //  variants={animateImage}
+            variants={animateImage}
+            initial={"hidden"}
+            viewport={{ once: true }}
+            whileInView={"visible"}
+          className=" font-hanson text-4xl text-black [writing-mode:vertical-lr]  whitespace-nowrap sm:hidden hidden md:flex items-center sm:absolute right-0">
             KINDA WEIRD
-          
             <svg
         width="30"
         height="53"
@@ -116,7 +121,7 @@ const Content = () => {
           stroke-width="1.5"
         ></path>
       </svg>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </AnimatePresence>

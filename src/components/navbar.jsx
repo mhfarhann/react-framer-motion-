@@ -6,6 +6,7 @@ import burger from '../assets/burger.jpg'
 import Marque from './marque'
 import Hamburger from './hamburger'
 import noise from "../assets/noise.png";
+import Arrow from "../assets/arrow";
 
 
 const Navbar = ({openNavbar}) => {
@@ -41,7 +42,7 @@ const Navbar = ({openNavbar}) => {
      className='sm:flex hidden  bg-black ' >
       <div key='list' 
        style={{ backgroundImage: `url(${noise})`}} 
-      className="sm:flex items-center mx-auto justify-center p-2 bg-pewter-50  w-screen">
+      className="sm:flex items-center mx-auto justify-center p-2 bg-black  w-screen">
       {navbar.map((collection) => (
         
         <motion.a
@@ -51,7 +52,7 @@ const Navbar = ({openNavbar}) => {
         // whileHover={{ scale: 1.1 }}
         // ,delay: i * 0.3
         transition={{ ease: "easeOut" , duration: 0.4  ,delay: collection.id * 0.4}}  
-        className='font-hanson px-4 py-2 mr-4 cursor-pointer ' >
+        className='font-hanson px-4 py-2 mr-4 cursor-pointer text-pewter-50' >
         {collection.items}
        </motion.a>
       ))}
@@ -89,11 +90,9 @@ const Navbar = ({openNavbar}) => {
           key={collection.id} 
           exit={{ x:'-100vw', transition: {duration: 0.2}}}
          
-          className=' border-b-2  font-hanson  text-medium   p-2 flex justify-between ' >
+          className=' border-b-[1px] border-solid border-black font-hanson  text-medium   p-2 flex justify-between ' >
          <motion.p  whileHover={{x:5}} transition={{ duration: 0.3 }}  >{collection.items}</motion.p>
-          <motion.svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 float-right">
-            <motion.path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-          </motion.svg>
+          <Arrow stroke={'#000'}/>
         </motion.div>
       ))} 
      <motion.div className='flex  w-full justify-between fixed bottom-16  h-10'>
